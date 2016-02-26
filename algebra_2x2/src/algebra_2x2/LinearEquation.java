@@ -1,6 +1,16 @@
 
 package algebra_2x2;
 
+/*
+    2 by 2 system of linear equations
+
+     ax + by = e
+     cx + dy = f
+
+     x = (ed - bf) / (ad - bc)
+     y = (af - ec) / (ad - bc)
+*/
+
 public class LinearEquation {
     private double a;
     private double b;
