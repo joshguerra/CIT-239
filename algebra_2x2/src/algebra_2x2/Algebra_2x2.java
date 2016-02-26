@@ -3,8 +3,9 @@
     CH 9 #9.11 Intro to Java Programming
     By Josh Guerra
     Created     02.25.16
-    Modified    02.25.16
-
+    Modified    02.26.16
+                Prompted user for a, b, c, d, e, f
+                had previously misread directions
     Analysis
 
     Design a class named LinearEquation for a 
@@ -33,44 +34,37 @@
  */
 package algebra_2x2;
 
+import java.util.Scanner;
+
 public class Algebra_2x2 {
 
     public static void main(String[] args) {
-        double  sys1_a = 9.0,
-                sys1_b = 4.0,
-                sys1_c = 3.0,
-                sys1_d = -5.0,
-                sys1_e = -6.0,
-                sys1_f = -21.0;
+        double sys_a, sys_b, sys_c, sys_d, sys_e, sys_f;
+        Scanner input = new Scanner(System.in);
         
-        double  sys2_a = 1.0,
-                sys2_b = 2.0,
-                sys2_c = 2.0,
-                sys2_d = 4.0,
-                sys2_e = 4.0,
-                sys2_f = 5.0;
+        System.out.print("Please enter the value of a: ");
+        sys_a = input.nextDouble();
+        System.out.print("Please enter the value of b: ");
+        sys_b = input.nextDouble();
+        System.out.print("Please enter the value of c: ");
+        sys_c = input.nextDouble();
+        System.out.print("Please enter the value of d: ");
+        sys_d = input.nextDouble();
+        System.out.print("Please enter the value of e: ");
+        sys_e = input.nextDouble();
+        System.out.print("Please enter the value of f: ");
+        sys_f = input.nextDouble();
+        
+        LinearEquation system1 = new LinearEquation(sys_a, sys_b, sys_c, 
+                sys_d, sys_e, sys_f);
 
-        LinearEquation system1 = new LinearEquation(sys1_a, sys1_b, sys1_c, 
-                sys1_d, sys1_e, sys1_f);
-        LinearEquation system2 = new LinearEquation(sys2_a, sys2_b, sys2_c, 
-                sys2_d, sys2_e, sys2_f);
-
-        // first test system
-        System.out.print("System 1: ");
+        // test system
         if (system1.isSolvable())
             System.out.println("x is " + system1.getX() + " and y is " + 
                     system1.getY());
         else
             System.out.println("The equations have no solution");
         
-        // second test system
-        System.out.print("System 2: ");
-        if (system2.isSolvable())
-            System.out.println("x is " + system2.getX() + " and y is " + 
-                    system2.getY());
-        else
-            System.out.println("The equations have no solution");
-
     }
 
 }

@@ -3,7 +3,8 @@
     CH 9 #9.12 Intro to Java Programming
     By Josh Guerra
     Created     02.25.16
-    Modified    02.25.16
+    Modified    02.26.16
+                fixed calculation of b and d
 
     Analysis
 
@@ -33,8 +34,8 @@
         (y1 - y2)x - (x1 - x2)y = (y1 - y2)x1 - (x1 - x2)y1
         (y3 - y4)x - (x3 - x4)y = (y3 - y4)x3 - (x3 - x4)y3
 
-        a = y1 - y2             b = x1 - x2 
-        c = y3 - y4             d = x3 - x4
+        a = y1 - y2             b = -(x1 - x2) 
+        c = y3 - y4             d = -(x3 - x4)
         
         e = (y1 - y2) * x1 - (x1 - x2) * y1
         f = (y3 - y4) * x3 - (x3 - x4) * y3
@@ -73,9 +74,9 @@ public class Geometry_intersectingLines {
         }
         
         a = yVals[0] - yVals[1];        // a = y1 - y2 
-        b = xVals[0] - xVals[1];        // b = x1 - x2 
+        b = -(xVals[0] - xVals[1]);     // b = x1 - x2 
         c = yVals[2] - yVals[3];        // c = y3 - y4             
-        d = xVals[2] - xVals[3];        // d = x3 - x4
+        d = -(xVals[2] - xVals[3]);     // d = x3 - x4
         
         // e = (y1 - y2) * x1 - (x1 - x2) * y1
         // f = (y3 - y4) * x3 - (x3 - x4) * y3
