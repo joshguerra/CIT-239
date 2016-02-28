@@ -1,0 +1,32 @@
+Rectangle 
+--
+- double width 
+- double length 
+--
++ Rectangle() 
++ Rectangle(double w, double l) 
++ void setW(double) 
++ void setL(double) 
++ double getW() 
++ double getL() 
++ double getArea() 
++ double getPerimeter() 
++ void print()
+
+RectanglarPrism 
+--
+- double width 
+- double length 
+- double height 
+--
++ RectanglarPrism() 
++ RectanglarPrism(double w, double l, double h) 
++ void setW(double) 
++ void setL(double) 
++ void setH(double) 
++ double getW() 
++ double getL() 
++ double getH() 
++ double getSurfaceArea() 
++ double getVolume() 
++ void print()
