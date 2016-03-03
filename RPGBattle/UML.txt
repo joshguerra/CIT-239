@@ -1,0 +1,100 @@
+Hydrons
+-----------------
+- string color
+- string name
+- string homePlanet
+- double height
+- double weight
+- int health              // (starts at 25)
+- int damagePotential     // (0-10, scaled by health)
+- int numVictories
+- int numLosses
+
+- attackType ??
+-----------------
+- void setColor(string)
+- void setName(string)
+- void setHomePlanet(string)
+- void setHeight(double)
+- void setWeight(double)
+- void setHealth(int)
+- void setDamagePotential(int)
+- void setNumVictories(int)
+- void setNumLosses(int)
++ string getColor()
++ string getName()
++ string getHomePlanet()
++ double getHeight()
++ double getWeight()
++ int getHealth()
++ int getDamagePotential()
++ int getNumVictories()
++ int getNumLosses()
+
++ void setAttackType ??
++ ?? getAttackType()
+
++ Hydron(string, string)        // set color and name. 
+                                // other features will be randomized
++ int rollDie(DiceRoll)
++ int win()
++ void lose(int)
++ void heal()
++ void printHydron()
+
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+Zexors
+-----------------
+- string color
+- string name
+- string species
+- double height
+- double weight
+- int health              // (starts at 25)
+- int damagePotential     // (0-10, scaled by health)
+- int numVictories
+- int numLosses
+
+- attackType ??
+-----------------
+- void setColor(string)
+- void setName(string)
+- void setSpecies(string)
+- void setHeight(double)
+- void setWeight(double)
+- void setHealth(int)
+- void setDamagePotential(int)
+- void setNumVictories(int)
+- void setNumLosses(int)
++ string getColor()
++ string getName()
++ string getSpecies()
++ double getHeight()
++ double getWeight()
++ int getHealth()
++ int getDamagePotential()
++ int getNumVictories()
++ int getNumLosses()
+
++ void setAttackType ??
++ ?? getAttackType()
+
++ Zexor(string, string)         // set color and name. 
+                                // other features will be randomized
++ int rollDie(DiceRoll)
++ int win()
++ void lose(int)
++ void heal()
++ void printHydron()
+
+~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+DiceRoll
+-----------------
+- int sides
+-----------------
++ void setSides(int)
++ int getSides()
++ int roll()
