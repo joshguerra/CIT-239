@@ -3,18 +3,18 @@ Hydrons
 - string color
 - string name
 - string homePlanet
+- string attackType
 - double height
 - double weight
 - int health              // (starts at 25)
 - int damagePotential     // (0-10, scaled by health)
 - int numVictories
 - int numLosses
-
-- attackType ??
 -----------------
 - void setColor(string)
 - void setName(string)
 - void setHomePlanet(string)
+- void setAttackType(string)
 - void setHeight(double)
 - void setWeight(double)
 - void setHealth(int)
@@ -24,15 +24,13 @@ Hydrons
 + string getColor()
 + string getName()
 + string getHomePlanet()
++ string getAttackType()
 + double getHeight()
 + double getWeight()
 + int getHealth()
 + int getDamagePotential()
 + int getNumVictories()
 + int getNumLosses()
-
-+ void setAttackType ??
-+ ?? getAttackType()
 
 + Hydron(string, string)        // set color and name. 
                                 // other features will be randomized
@@ -50,18 +48,18 @@ Zexors
 - string color
 - string name
 - string species
+- string attackType
 - double height
 - double weight
 - int health              // (starts at 25)
 - int damagePotential     // (0-10, scaled by health)
 - int numVictories
 - int numLosses
-
-- attackType ??
 -----------------
 - void setColor(string)
 - void setName(string)
 - void setSpecies(string)
+- void setAttackType(string)
 - void setHeight(double)
 - void setWeight(double)
 - void setHealth(int)
@@ -71,15 +69,13 @@ Zexors
 + string getColor()
 + string getName()
 + string getSpecies()
++ string getAttackType()
 + double getHeight()
 + double getWeight()
 + int getHealth()
 + int getDamagePotential()
 + int getNumVictories()
 + int getNumLosses()
-
-+ void setAttackType ??
-+ ?? getAttackType()
 
 + Zexor(string, string)         // set color and name. 
                                 // other features will be randomized

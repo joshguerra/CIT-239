@@ -91,6 +91,7 @@ public class RPGBattle {
         int zexor = 0;
         int hRoll;
         int zRoll;
+        int dmg;
         
         // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ //
         
@@ -147,16 +148,20 @@ public class RPGBattle {
             
             // damage is dealt
             if (hRoll > zRoll) {
-                teamZ[zexor].lose(teamH[hydron].win());
-                System.out.println("\n" + teamH[hydron].getName() + " deals " 
-                        + teamH[hydron].win() + " damage to " 
-                        + teamZ[zexor].getName());
+                dmg = teamH[hydron].win();
+                teamZ[zexor].lose(dmg);
+                System.out.println("\n" + teamH[hydron].getName() + " attacks " 
+                        + teamZ[zexor].getName() + " with " 
+                        + teamH[hydron].getAttackType() + " for " 
+                        + dmg + " damage!");
             }
             else {
-                teamH[hydron].lose(teamZ[zexor].win());
-                System.out.println("\n" + teamZ[zexor].getName() + " deals " 
-                        + teamZ[zexor].win() + " damage to " 
-                        + teamH[hydron].getName());
+                dmg = teamZ[zexor].win();
+                teamH[hydron].lose(dmg);
+                System.out.println("\n" + teamZ[zexor].getName() + " attacks "
+                        + teamH[hydron].getName() + " with " 
+                        + teamZ[zexor].getAttackType() + " for " 
+                        + dmg + " damage!");
             }
             
             System.out.println("\n" + line + "\n");

@@ -4,6 +4,7 @@ public class Zexor {
     private String color;
     private String name;
     private String species;
+    private String attackType;
     private double height;          // in meters
     private double weight;          // in kg
     private int health;             // max 25
@@ -11,9 +12,17 @@ public class Zexor {
     private int numVictories;
     private int numLosses;
     
+    private String[] attacks = {
+        "Flail", "Poison Sting", "Tail Slap",
+        "Double Kick", "Bullet Punch", 
+        "Metal Claw", "Wing Attack", "Slash", 
+        "Body Slam", "Wild Charge", "Hammer Arm"
+    };
+    
     private void setColor(String clr) { color = clr; }
     private void setName(String n) { name = n; }
     private void setSpecies(String s) { species = s; }
+    private void setAttackType(String attack) { attackType = attack; }
     private void setHeight(double h) { height = h; }
     private void setWeight(double w) { weight = w; }
     private void setHealth(int h) { health = h; }
@@ -24,6 +33,7 @@ public class Zexor {
     String getColor(){ return color; }
     String getName(){ return name; }
     String getSpecies(){ return species; }
+    String getAttackType() { return attackType; }
     double getHeight(){ return height; }
     double getWeight(){ return weight; }
     int getHealth(){ return health; }
@@ -46,6 +56,7 @@ public class Zexor {
         setHeight(150 + (int)(Math.random() * 50));   // between 150 and 200 cm
         setWeight(72 + (int)(Math.random() * 36));    // between 72 and 108 kg
         setDamagePotential((int)(Math.random() * 11));    // 0 - 10
+        setAttackType(attacks[damagePotential]);
     }
     
     // ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ // 
@@ -75,8 +86,8 @@ public class Zexor {
     void printZexor() {
         System.out.println(name + " the " + color + " Zexor");
         System.out.println("Height: " + height + "\tWeight: " + weight);
-        System.out.println("Health: " + health + "\tDamage Potential: " 
-                + damagePotential);
+        System.out.println("Health: " + health + "\tStrength: " + damagePotential);
+        System.out.println("Wins: " + numVictories + "\t\tLosses: " + numLosses);
         System.out.println();
     }
 
